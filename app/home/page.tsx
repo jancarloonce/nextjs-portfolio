@@ -1,5 +1,7 @@
 import Hero from "../components/Hero"
 import ProjectRow from "../components/ProjectRow"
+import { Suspense } from "react"
+import Loading from "../components/Loading"
 
 const projectsData = [
   {
@@ -88,14 +90,16 @@ const projectsData = [
 
 export default function Home() {
   return (
-    <>
-      <Hero />
-      <div className="container mx-auto px-4 py-8">
-        {projectsData.map((row, index) => (
-          <ProjectRow key={index} title={row.title} projects={row.projects} />
-        ))}
-      </div>
-    </>
+    <Suspense fallback={<Loading />}>
+      <main>
+        <Hero />
+        <div className="container mx-auto px-4 py-8">
+          {projectsData.map((row, index) => (
+            <ProjectRow key={index} title={row.title} projects={row.projects} />
+          ))}
+        </div>
+      </main>
+    </Suspense>
   )
 }
 

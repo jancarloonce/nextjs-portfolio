@@ -1,9 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:700,900");
+
 .introContainer {
   background: radial-gradient(#fff, #aaa);
   background-size: 100vw 100vh;
   overflow: hidden;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -12,7 +13,6 @@
   top: 0;
   left: 0;
   z-index: 9999;
-  cursor: pointer;
 }
 
 .txt {
@@ -23,6 +23,24 @@
   animation: netflix_style 3.5s 1;
   outline: none;
   white-space: nowrap;
+}
+
+.playPrompt {
+  position: absolute;
+  bottom: 20px;
+  font-size: 16px;
+  color: #e90418;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 @keyframes netflix_style {
@@ -55,5 +73,10 @@
   100% {
     opacity: 0;
   }
+}
+
+.fadeOut {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
 }
 

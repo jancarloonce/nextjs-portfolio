@@ -6,8 +6,25 @@
   --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 0, 0, 0;
   --background-end-rgb: 0, 0, 0;
-  --long-shadow-start: 0px 0px transparent, 1px 1px #aaa, 2px 2px #aaa, 3px 3px #aaa, 4px 4px #aaa, 5px 5px #aaa;
-  --long-shadow-mid: 0px 0px transparent, 1px 1.5px #aaa, 2px 3px #aaa, 3px 4.5px #aaa, 4px 6px #aaa, 5px 7.5px #aaa;
+  --long-shadow-start:
+    0px 0px transparent,
+    1px 1px #aaa, 2px 2px #aaa, 3px 3px #aaa,
+    4px 4px #aaa, 5px 5px #aaa, 6px 6px #aaa,
+    7px 7px #aaa, 8px 8px #aaa, 9px 9px #aaa,
+    10px 10px #aaa, 11px 11px #aaa, 12px 12px #aaa,
+    13px 13px #aaa, 14px 14px #aaa, 15px 15px #aaa,
+    16px 16px #aaa, 17px 17px #aaa, 18px 18px #aaa,
+    19px 19px #aaa, 20px 20px #aaa;
+
+  --long-shadow-mid:
+    0px 0px transparent,
+    1px 1.5px #aaa, 2px 3px #aaa, 3px 4.5px #aaa,
+    4px 6px #aaa, 5px 7.5px #aaa, 6px 9px #aaa,
+    7px 10.5px #aaa, 8px 12px #aaa, 9px 13.5px #aaa,
+    10px 15px #aaa, 11px 16.5px #aaa, 12px 18px #aaa,
+    13px 19.5px #aaa, 14px 21px #aaa, 15px 22.5px #aaa,
+    16px 24px #aaa, 17px 25.5px #aaa, 18px 27px #aaa,
+    19px 28.5px #aaa, 20px 30px #aaa;
 }
 
 body {

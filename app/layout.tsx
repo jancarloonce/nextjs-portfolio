@@ -1,11 +1,9 @@
-import "@/app/globals.css"
+import "./globals.css"
 import { Inter, Roboto } from "next/font/google"
+import Header from "./components/Header"
 
 const inter = Inter({ subsets: ["latin"] })
-const roboto = Roboto({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-})
+const roboto = Roboto({ weight: ["700", "900"], subsets: ["latin"], variable: "--font-roboto" })
 
 export const metadata = {
   title: "Jan Carlo Once - Portfolio",
@@ -18,12 +16,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${roboto.className} ${inter.className}`}>
-      <body className="bg-black text-white min-h-screen font-sans">{children}</body>
+    <html lang="en" className={`${roboto.variable} ${inter.className}`}>
+      <body className="bg-black text-white min-h-screen">
+        <Header />
+        {children}
+      </body>
     </html>
   )
 }
 
-
-
-import './globals.css'
