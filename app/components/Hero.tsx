@@ -23,7 +23,9 @@ const Hero = () => {
             />
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white">Jan Carlo Once</h1>
-          <p className="text-xl sm:text-2xl md:text-3xl text-white opacity-90">Software Engineer | Fullstack Developer | AI/ML Consultant | Cloud Practitioner</p>
+          <p className="text-xl sm:text-2xl md:text-3xl text-white opacity-90">
+            Software Engineer | Fullstack Developer | AI/ML Consultant | Cloud Practitioner
+          </p>
           <div className="max-h-48 md:max-h-60 overflow-y-auto pr-4 text-white text-sm sm:text-base md:text-lg opacity-80 custom-scrollbar">
             <p>
               I'm a seasoned Software Engineer with a passion for crafting inventive and scalable solutions that cater
