@@ -1,3 +1,7 @@
+"use client"
+
+import { useSearchParams } from "next/navigation"
+import Header from "../components/Header"
 import Hero from "../components/Hero"
 import ProjectRow from "../components/ProjectRow"
 import { Suspense } from "react"
@@ -89,17 +93,23 @@ const projectsData = [
 ]
 
 export default function Home() {
+  const searchParams = useSearchParams()
+  const profile = searchParams.get("profile")
+
   return (
-    <Suspense fallback={<Loading />}>
-      <main>
-        <Hero />
-        <div className="container mx-auto px-4 py-8">
-          {projectsData.map((row, index) => (
-            <ProjectRow key={index} title={row.title} projects={row.projects} />
-          ))}
-        </div>
-      </main>
-    </Suspense>
+    <>
+      <Header selectedProfile={profile ? profile.charAt(0).toUpperCase() + profile.slice(1) : undefined} />
+      <Suspense fallback={<Loading />}>
+        <main>
+          <Hero />
+          <div className="container mx-auto px-4 py-8">
+            {projectsData.map((row, index) => (
+              <ProjectRow key={index} title={row.title} projects={row.projects} />
+            ))}
+          </div>
+        </main>
+      </Suspense>
+    </>
   )
 }
 

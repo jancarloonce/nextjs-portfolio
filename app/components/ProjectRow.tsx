@@ -24,14 +24,13 @@ const ProjectRow: React.FC<ProjectRowProps> = ({ title, projects }) => {
             href={`/project/${project.id}`}
             className="flex-none w-64 hover:scale-105 transition-transform duration-200"
           >
-            <div className="relative h-36 mb-2">
+            <div className="relative w-full h-36 mb-2">
               <Image
                 src={project.image || "/placeholder.svg"}
                 alt={project.title}
                 fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="rounded object-cover"
-                priority={false}
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
               />
             </div>
             <h3 className="text-lg font-semibold">{project.title}</h3>

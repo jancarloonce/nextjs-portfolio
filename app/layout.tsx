@@ -1,6 +1,5 @@
 import "./globals.css"
 import { Inter, Roboto } from "next/font/google"
-import Header from "./components/Header"
 
 const inter = Inter({ subsets: ["latin"] })
 const roboto = Roboto({ weight: ["700", "900"], subsets: ["latin"], variable: "--font-roboto" })
@@ -17,10 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${roboto.variable} ${inter.className}`}>
-      <body className="bg-black text-white min-h-screen">
-        <Header />
-        {children}
-      </body>
+      <body className="bg-black text-white min-h-screen">{children}</body>
     </html>
   )
 }

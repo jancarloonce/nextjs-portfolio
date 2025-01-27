@@ -1,6 +1,4 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ["class"],
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,9 +6,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ["Roboto", "Inter", "sans-serif"],
-      },
       colors: {
         "netflix-red": "#E50914",
         border: "hsl(var(--border))",
