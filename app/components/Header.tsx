@@ -38,7 +38,7 @@ const Header: React.FC<HeaderProps> = ({ selectedProfile }) => {
         isScrolled ? "bg-black shadow-lg" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1920px] mx-auto px-5 sm:px-6 md:px-8 lg:px-10">
         <div className="flex items-center justify-between h-16 sm:h-20">
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0">
@@ -51,7 +51,7 @@ const Header: React.FC<HeaderProps> = ({ selectedProfile }) => {
                 priority
               />
             </Link>
-            <nav className="hidden md:ml-8 md:flex md:space-x-6">
+            <nav className="hidden md:ml-4 md:flex md:space-x-4 lg:ml-6 lg:space-x-5">
               {navLinks.map((link) => (
                 <Link
                   key={link.label}
@@ -69,17 +69,10 @@ const Header: React.FC<HeaderProps> = ({ selectedProfile }) => {
               <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
                 <SheetTrigger asChild>
                   <button className="p-2 text-white hover:text-gray-300 transition-colors" aria-label="Toggle menu">
-                    <Menu className="w-6 h-6" />
+                    {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                   </button>
                 </SheetTrigger>
                 <SheetContent side="right" className="w-[250px] sm:w-[300px] bg-black/95 border-gray-800">
-                  <button
-                    className="absolute top-4 right-4 p-2 text-white hover:text-gray-300 transition-colors"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    aria-label="Close menu"
-                  >
-                    <X className="w-6 h-6" />
-                  </button>
                   <nav className="mt-16">
                     <ul className="flex flex-col space-y-6">
                       {navLinks.map((link) => (
@@ -100,7 +93,7 @@ const Header: React.FC<HeaderProps> = ({ selectedProfile }) => {
             </div>
 
             {selectedProfile && (
-              <div className="ml-4">
+              <div className="ml-3 sm:ml-4">
                 <Image
                   src={`/${selectedProfile.toLowerCase()}.jpg`}
                   alt={`${selectedProfile} Profile`}
